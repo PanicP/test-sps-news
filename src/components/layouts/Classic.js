@@ -4,14 +4,22 @@ import Header from "./Header"
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  /* min-height: calc(100vh - 120px - 160px); */
+  /* display: flex;
+  flex-direction: column; */
+`
+
+const Body = styled.div`
+  min-height: calc(100vh - 160px - 320px);
 `
 
 const ClassicLayout = ({ children }) => {
   return (
     <Container>
       <Header />
-      { children }
+      <Body>
+        {children}
+      </Body>
       <Footer />
     </Container>
   )
